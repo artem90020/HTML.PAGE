@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+    <style>
+        .container {
+            background-color: #DDDDDD;
+            padding: 4px;
+            display: grid;
+            grid-template-areas:
+                "header header header header header header"
+                "sub-left sub-left sub-left sub-right sub-right sub-right"
+                "left-menu left-menu main-area main-area main-area right-area"
+                "footer footer footer footer footer footer";
+            grid-gap: 5px;
+            text-align: center;
+            font-size: 24pt;
+        }
+        .container div {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        .header {
+            grid-area: header;
+            background-color: #DDDD77;
+        }
+        .sub-left {
+            grid-area: sub-left;
+            background-color: blue;
+        }
+        .sub-right {
+            grid-area: sub-right;
+            background-color: blue;
+        }
+        .left-menu {
+            grid-area: left-menu;
+            background-color: #DD5555;
+            height: 300px;
+        }
+        .main-area {
+            grid-area: main-area;
+            background-color: #ADD8E6;
+        }
+        .right-area {
+            grid-area: right-area;
+            background-color: #44AA33;
+        }
+        .footer {
+            grid-area: footer;
+            background-color: #FFAA00;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">Заголовок</div>
+        <div class="sub-left">Підзаголовок 1</div>
+        <div class="sub-right">Підзаголовок 2</div>
+        <div class="left-menu">Додаткове меню</div>
+        <div class="main-area">Основний вміст</div>
+        <div class="right-area">Допоміжні дані</div>
+        <div class="footer">Підвал</div>
+    </div>
+</body>
+</html>
